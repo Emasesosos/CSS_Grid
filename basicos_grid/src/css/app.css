@@ -13,3 +13,39 @@ html {
 body {
   box-sizing: border-box;
 }
+
+/* ***** => Grid Container (1) <= ***** */
+/* ***** => Definiendo Columnas(column) y filas(rows) (2) <= ***** */
+/* ***** => Auto (3) <= ***** */
+/* ***** => Shorthand (4) <= ***** */
+/* ***** => Repeat (5) <= ***** */
+h2 {
+  margin: 0;
+}
+
+.servicios {
+  border: 3px solid black;
+  height: 300px;
+  display: grid;
+  grid: repeat(2, 50%)/repeat(2, 10% 40%);
+}
+
+.servicios .servicio {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.servicios .servicio-1,
+.servicios .servicio-4 {
+  background-color: darkviolet;
+}
+
+.servicios .servicio-2,
+.servicios .servicio-5 {
+  background-color: limegreen;
+}
+
+.servicios .servicio-3,
+.servicios .servicio-6 {
+  background-color: teal;
+}

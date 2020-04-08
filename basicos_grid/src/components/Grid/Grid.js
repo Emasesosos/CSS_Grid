@@ -1,5 +1,4 @@
 import React from 'react';
-import './../../css/app.css';
 
 const Grid = () => {
     return (
@@ -13,6 +12,15 @@ const Grid = () => {
             <div className="servicio servicio-3">
                 <h2>Servicio 3</h2>
             </div>
+            {/* <div className="servicio servicio-4">
+                <h2>Servicio 4</h2>
+            </div>
+            <div className="servicio servicio-5">
+                <h2>Servicio 5</h2>
+            </div>
+            <div className="servicio servicio-6">
+                <h2>Servicio 6</h2>
+            </div> */} 
         </div>
     );
 }

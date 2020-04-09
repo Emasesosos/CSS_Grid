@@ -1,6 +1,5 @@
 html {
     @include box-sizing(border-box);
-    height: 100%;
 }
 
 *,
@@ -12,15 +11,19 @@ html {
 body {
     @include box-sizing(border-box);
     margin: 0;
-    padding: 0;
+    background: #1FA2FF;
+    background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);
+    background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);
+    color: $blanco;
     font-family: $fuente_principal;
 }
 
+
 /* ***** => Grid Container (1) <= ***** */
+
 // h2 {
 //     margin: 0;
 // }
-
 // .servicios {
 //     border: 3px solid black;
 //     display: grid;
@@ -53,10 +56,10 @@ body {
 // }
 
 /* ***** => Definiendo Columnas(column) y filas(rows) (2) <= ***** */
+
 // h2 {
 //     margin: 0;
 // }
-
 // .servicios {
 //     border: 3px solid black;
 //     display: grid;
@@ -95,10 +98,10 @@ body {
 // }
 
 /* ***** => Auto (3) <= ***** */
+
 // h2 {
 //     margin: 0;
 // }
-
 // .servicios {
 //     border: 3px solid black;
 //     height: 300px;
@@ -132,10 +135,10 @@ body {
 // }
 
 /* ***** => Shorthand (4) <= ***** */
+
 // h2 {
 //     margin: 0;
 // }
-
 // .servicios {
 //     border: 3px solid black;
 //     height: 300px;
@@ -144,7 +147,6 @@ body {
 //     // grid-template-rows: 50% 50%;
 //     /* gridShorthand  => grid: rows / columns */
 //     grid:  50% 50% / 33.3% 33.3% 33.3%;
-
 //     .servicio {
 //         color: $blanco;
 //         text-align: center;
@@ -169,14 +171,13 @@ body {
 //     .servicio-6 {
 //         background-color: teal;
 //     }
-
 // }
 
 /* ***** => Repeat (5) <= ***** */
+
 // h2 {
 //     margin: 0; 
 // }
-
 // .servicios {
 //     border: 3px solid black;
 //     height: 300px;
@@ -185,7 +186,6 @@ body {
 //     // grid-template-rows: repeat(2, 50%);
 //     // grid: repeat(2, 50%) / 50% repeat(2, 25%);
 //     grid: repeat(2, 50%) / repeat(2, 10% 40%);
-
 //     .servicio {
 //         color: $blanco;
 //         text-align: center;
@@ -202,18 +202,16 @@ body {
 //     .servicio-6 {
 //         background-color: teal;
 //     }
-
 // }
 
 /* ***** => Grid Areas: Nombres (6) <= ***** */
+
 // h1 {
 //     margin: 0;
 // }
-
 // img {
 //     width: 100%;
 // }
-
 // .contenedor {
 //     height: 100vh;
 //     width: 900px;
@@ -225,7 +223,6 @@ body {
 //         "main main main aside"
 //         "footer footer footer footer";
 //     grid-gap: 1rem;
-    
 //     .header {
 //         background-color: coral;
 //         color: $blanco;
@@ -236,7 +233,6 @@ body {
 //         justify-content: center;
 //         align-items: center;
 //     }
-    
 //     .contenido-principal {
 //         background-color: darkred;
 //         color: $blanco;
@@ -247,7 +243,6 @@ body {
 //         justify-content: center;
 //         align-items: center;
 //     }
-
 //     .sidebar {
 //         background-color: olive;
 //         color: $blanco;
@@ -257,7 +252,6 @@ body {
 //         justify-content: center;
 //         align-items: center;
 //     }
-
 //     .footer {
 //         background-color: navy;
 //         color: $blanco;
@@ -268,11 +262,9 @@ body {
 //         // grid-column: 1/5;
 //         grid-area: footer;
 //     }
-
 // }
 
-
-/* ***** => Grid Areas: Automovil (7) <= ***** */ 
+/* ***** => Grid Areas: Automovil (7) <= ***** */
 
 // .contenedor-media { 
 //     margin: 0 auto;
@@ -282,68 +274,132 @@ body {
 //         "titulo titulo titulo titulo"
 //         "imagen desc desc desc";
 //     grid-gap: 1rem;
-
 //     .titulo {
 //         grid-area: titulo;
 //         margin: 0;
 //     }
-
 //     .imagen {
 //         grid-area: imagen;
 //     }
-
 //     .descripcion {
 //         grid-area: desc;
 //     }
- 
 // }
 
-/* ***** => Grid Areas: Automovil2 (8) <= ***** */ 
+/* ***** => Grid Areas: Automovil2 (8) <= ***** */
 
-img {
-    width: 100%
-}
+// img {
+//     width: 100%
+// }
+// .contenedor-media {
+//     margin: 0 auto;
+//     max-width: 800px;
+//     display: grid;
+//     grid-template-areas: "titulo" "slogan" "info" "imagen" "entrada";
+//     @include tablet {
+//         grid-template-areas: "titulo titulo" "imagen slogan" "imagen info" "entrada entrada";
+//         grid-template-columns: repeat(2, 50%);
+//     }
+//     .titulo {
+//         grid-area: titulo;
+//     }
+//     .imagen {
+//         grid-area: imagen;
+//     }
+//     .info {
+//         grid-area: info;
+//         display: flex;
+//         justify-content: center;
+//     }
+//     .slogan {
+//         grid-area: slogan;
+//     }
+//     .entrada {
+//         grid-area: entrada;
+//     }
+// }
 
-.contenedor-media { 
+/* ***** => Grid FR, Repeat (9) <= ***** */
+
+// h2 {
+//     margin: 0;
+// }
+// .servicios {
+//     border: 3px solid black;
+//     display: grid;
+//     height: 300px;
+//     grid-template-columns: repeat(2, 30%);
+//     grid-gap: 1rem;
+//     /* Alinear */
+//     align-items: start;
+//     align-items: center;
+//     align-items: end;
+//     align-items: initial;
+//     align-items: flex-stretch;
+//     align-content: start;
+//     align-content: end;
+//     justify-content: end;
+//     justify-content: center;
+//     align-content: center;
+//     .servicio {
+//         color: $blanco;
+//         text-align: center;
+//     }
+//     .servicio-1,
+//     .servicio-4 {
+//         background-color: darkviolet;
+//     }
+//     .servicio-2,
+//     .servicio-5 {
+//         background-color: limegreen;
+//     }
+//     .servicio-3,
+//     .servicio-6 {
+//         background-color: teal;
+//     }
+// }
+
+/* ***** => Layout Experimental (10) <= ***** */
+
+.contenedor {
+    display: grid;
     margin: 0 auto;
-    max-width: 800px;
-    display: grid; 
-    grid-template-areas: 
-        "titulo"
-        "slogan"
-        "info"
-        "imagen"
-        "entrada";
-
+    max-width: 900px;
+    background-color: $blanco;
+    height: 100vh;
+    grid-template-areas: "header" "nav" "izquierda" "contenido" "derecha" "footer";
     @include tablet {
-        grid-template-areas: 
-            "titulo titulo"
-            "imagen slogan"
-            "imagen info"
-            "entrada entrada";
-        grid-template-columns: repeat(2, 50%);
+        grid-template-areas: "header header header header" "izquierda nav nav nav" "izquierda contenido contenido derecha" "izquierda contenido contenido derecha" "footer footer footer derecha";
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 80px 80px auto auto 80px;
+        grid-gap: 1rem;
     }
-
-    .titulo {
-        grid-area: titulo;
+    >* {
+        padding: 2rem;
+        font-size: 1.4rem;
     }
-
-    .imagen {
-       grid-area: imagen;
+    header {
+        background-color: cornflowerblue;
+        grid-area: header;
     }
-    
-    .info {
-        grid-area: info;
+    nav {
+        background-color: coral;
+        grid-area: nav;
     }
-
-    .slogan {
-        grid-area: slogan;
+    aside.izquierda {
+        background-color: cadetblue;
+        grid-area: izquierda;
     }
-
-    .entrada {
-        grid-area: entrada;
+    .contenido-principal {
+        background-color: crimson;
+        grid-area: contenido;
     }
- 
+    aside.derecha {
+        background-color: darkblue;
+        grid-area: derecha;
+    }
+    footer {
+        background-color: darkmagenta;
+        grid-area: footer;
+    }
 }
-
-

@@ -9,10 +9,10 @@ const Grid = () => {
             <div className="servicio servicio-2">
                 <h2>Servicio 2</h2>
             </div>
-            <div className="servicio servicio-3">
+            {/* <div className="servicio servicio-3">
                 <h2>Servicio 3</h2>
             </div>
-            {/* <div className="servicio servicio-4">
+            <div className="servicio servicio-4">
                 <h2>Servicio 4</h2>
             </div>
             <div className="servicio servicio-5">

@@ -11,6 +11,9 @@ html {
 
 body {
     @include box-sizing(border-box);
+    margin: 0;
+    padding: 0;
+    font-family: $fuente_principal;
 }
 
 /* ***** => Grid Container (1) <= ***** */
@@ -170,34 +173,177 @@ body {
 // }
 
 /* ***** => Repeat (5) <= ***** */
-h2 {
-    margin: 0; 
+// h2 {
+//     margin: 0; 
+// }
+
+// .servicios {
+//     border: 3px solid black;
+//     height: 300px;
+//     display: grid; 
+//     // grid-template-columns: 50% repeat(2, 25%);
+//     // grid-template-rows: repeat(2, 50%);
+//     // grid: repeat(2, 50%) / 50% repeat(2, 25%);
+//     grid: repeat(2, 50%) / repeat(2, 10% 40%);
+
+//     .servicio {
+//         color: $blanco;
+//         text-align: center;
+//     }
+//     .servicio-1,
+//     .servicio-4 {
+//         background-color: darkviolet;
+//     }
+//     .servicio-2,
+//     .servicio-5 {
+//         background-color: limegreen;
+//     }
+//     .servicio-3,
+//     .servicio-6 {
+//         background-color: teal;
+//     }
+
+// }
+
+/* ***** => Grid Areas: Nombres (6) <= ***** */
+// h1 {
+//     margin: 0;
+// }
+
+// img {
+//     width: 100%;
+// }
+
+// .contenedor {
+//     height: 100vh;
+//     width: 900px;
+//     margin: 0 auto;
+//     display: grid;
+//     grid: 100px auto 100px / repeat(4, 25%);
+//     grid-template-areas: 
+//         "header header header header"
+//         "main main main aside"
+//         "footer footer footer footer";
+//     grid-gap: 1rem;
+    
+//     .header {
+//         background-color: coral;
+//         color: $blanco;
+//         text-align: center;
+//         // grid-column: 1/5;
+//         grid-area: header;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//     }
+    
+//     .contenido-principal {
+//         background-color: darkred;
+//         color: $blanco;
+//         text-align: center;
+//         // grid-column: 1/4;
+//         grid-area: main;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//     }
+
+//     .sidebar {
+//         background-color: olive;
+//         color: $blanco;
+//         text-align: center;
+//         grid-area: aside;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//     }
+
+//     .footer {
+//         background-color: navy;
+//         color: $blanco;
+//         text-align: center;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         // grid-column: 1/5;
+//         grid-area: footer;
+//     }
+
+// }
+
+
+/* ***** => Grid Areas: Automovil (7) <= ***** */ 
+
+// .contenedor-media { 
+//     margin: 0 auto;
+//     max-width: 800px;
+//     display: grid;
+//     grid-template-areas: 
+//         "titulo titulo titulo titulo"
+//         "imagen desc desc desc";
+//     grid-gap: 1rem;
+
+//     .titulo {
+//         grid-area: titulo;
+//         margin: 0;
+//     }
+
+//     .imagen {
+//         grid-area: imagen;
+//     }
+
+//     .descripcion {
+//         grid-area: desc;
+//     }
+ 
+// }
+
+/* ***** => Grid Areas: Automovil2 (8) <= ***** */ 
+
+img {
+    width: 100%
 }
 
-.servicios {
-    border: 3px solid black;
-    height: 300px;
+.contenedor-media { 
+    margin: 0 auto;
+    max-width: 800px;
     display: grid; 
-    // grid-template-columns: 50% repeat(2, 25%);
-    // grid-template-rows: repeat(2, 50%);
-    // grid: repeat(2, 50%) / 50% repeat(2, 25%);
-    grid: repeat(2, 50%) / repeat(2, 10% 40%);
+    grid-template-areas: 
+        "titulo"
+        "slogan"
+        "info"
+        "imagen"
+        "entrada";
 
-    .servicio {
-        color: $blanco;
-        text-align: center;
-    }
-    .servicio-1,
-    .servicio-4 {
-        background-color: darkviolet;
-    }
-    .servicio-2,
-    .servicio-5 {
-        background-color: limegreen;
-    }
-    .servicio-3,
-    .servicio-6 {
-        background-color: teal;
+    @include tablet {
+        grid-template-areas: 
+            "titulo titulo"
+            "imagen slogan"
+            "imagen info"
+            "entrada entrada";
+        grid-template-columns: repeat(2, 50%);
     }
 
+    .titulo {
+        grid-area: titulo;
+    }
+
+    .imagen {
+       grid-area: imagen;
+    }
+    
+    .info {
+        grid-area: info;
+    }
+
+    .slogan {
+        grid-area: slogan;
+    }
+
+    .entrada {
+        grid-area: entrada;
+    }
+ 
 }
+
+

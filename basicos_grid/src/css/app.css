@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /** Media Queries **/
 html {
   box-sizing: border-box;
@@ -11,12 +12,6 @@ html {
 
 body {
   box-sizing: border-box;
-  margin: 0;
-  background: #1FA2FF;
-  background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);
-  background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);
-  color: #FFFFFF;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* ***** => Grid Container (1) <= ***** */
@@ -29,55 +24,93 @@ body {
 /* ***** => Grid Areas: Automovil2 (8) <= ***** */
 /* ***** => Grid FR, Repeat (9) <= ***** */
 /* ***** => Layout Experimental (10) <= ***** */
-.contenedor {
-  display: grid;
-  margin: 0 auto;
-  max-width: 900px;
-  background-color: #FFFFFF;
-  height: 100vh;
-  grid-template-areas: "header" "nav" "izquierda" "contenido" "derecha" "footer";
+/* ***** => Grid Auto-fit y Auto-fill (11) <= ***** */
+/* ***** => Receta Fácil (12) <= ***** */
+.header {
+  padding-top: 3rem;
 }
 
-@media only screen and (min-width: 768px) {
-  .contenedor {
-    grid-template-areas: "header header header header" "izquierda nav nav nav" "izquierda contenido contenido derecha" "izquierda contenido contenido derecha" "footer footer footer derecha";
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 80px 80px auto auto 80px;
-    grid-gap: 1rem;
-  }
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
 }
 
-.contenedor > * {
-  padding: 2rem;
+img {
+  max-width: 100%;
+}
+
+.navegacion {
+  background-color: black;
+  margin: 3rem 0;
+}
+
+.navegacion a {
+  padding: 1rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.navegacion a:hover {
+  background-color: #C9C84A;
+}
+
+.navegacion .slider img {
+  width: 100%;
+}
+
+.titulo {
+  text-align: center;
+}
+
+.entrada p {
+  text-align: justify;
+}
+
+.entrada blockquote {
+  font-size: 1.4rem;
+  text-align: center;
+  font-style: italic;
+  color: #525252;
+}
+
+.informacion {
+  background-color: #C9C84A;
+  color: #FFFFFF;
   font-size: 1.4rem;
 }
 
-.contenedor header {
-  background-color: cornflowerblue;
-  grid-area: header;
+.informacion p {
+  margin: 0 0 .5rem 0;
+  padding: 1rem;
+  text-align: center;
 }
 
-.contenedor nav {
-  background-color: coral;
-  grid-area: nav;
+.imagen1,
+.imagen2 {
+  text-align: center;
 }
 
-.contenedor aside.izquierda {
-  background-color: cadetblue;
-  grid-area: izquierda;
+.footer {
+  background-color: #C9C84A;
+  padding-top: 3rem;
+  text-align: center;
 }
 
-.contenedor .contenido-principal {
-  background-color: crimson;
-  grid-area: contenido;
+.footer a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #525252;
+  margin-bottom: .5rem;
 }
 
-.contenedor aside.derecha {
-  background-color: darkblue;
-  grid-area: derecha;
-}
-
-.contenedor footer {
-  background-color: darkmagenta;
-  grid-area: footer;
+.footer .copyright {
+  color: white;
+  background-color: #282828;
+  margin: 3rem 0 0 0;
+  padding: 1rem;
+  text-align: center;
 }

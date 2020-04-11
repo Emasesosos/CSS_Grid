@@ -9,7 +9,7 @@ const Grid = () => {
             <div className="servicio servicio-2">
                 <h2>Servicio 2</h2>
             </div>
-            {/* <div className="servicio servicio-3">
+            <div className="servicio servicio-3">
                 <h2>Servicio 3</h2>
             </div>
             <div className="servicio servicio-4">
@@ -20,7 +20,7 @@ const Grid = () => {
             </div>
             <div className="servicio servicio-6">
                 <h2>Servicio 6</h2>
-            </div> */} 
+            </div>
         </div>
     );
 }

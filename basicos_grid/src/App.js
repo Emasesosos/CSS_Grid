@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react';
 // import Grid from './components/Grid/Grid';
 // import GridArea from './components/GridArea/GridArea';
-import Experimental from './components/Experimental/Experimental';
+// import Experimental from './components/Experimental/Experimental';
+import RecetaFacil from './components/Receta/RecetaFacil';
 import './css/app.css';
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <Fragment>
       {/* <Grid/> */}
       {/* <GridArea/> */}
-      <Experimental/>
+      {/* <Experimental/ */}
+      <RecetaFacil/>
     </Fragment>
   );
 }

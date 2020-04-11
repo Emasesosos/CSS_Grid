@@ -10,12 +10,12 @@ html {
 
 body {
     @include box-sizing(border-box);
-    margin: 0;
-    background: #1FA2FF;
-    background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);
-    background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);
-    color: $blanco;
-    font-family: $fuente_principal;
+    // margin: 0;
+    // background: #1FA2FF;
+    // background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);
+    // background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);
+    // color: $blanco;
+    // font-family: $fuente_principal;
 }
 
 
@@ -361,45 +361,177 @@ body {
 
 /* ***** => Layout Experimental (10) <= ***** */
 
-.contenedor {
-    display: grid;
-    margin: 0 auto;
-    max-width: 900px;
-    background-color: $blanco;
-    height: 100vh;
-    grid-template-areas: "header" "nav" "izquierda" "contenido" "derecha" "footer";
-    @include tablet {
-        grid-template-areas: "header header header header" "izquierda nav nav nav" "izquierda contenido contenido derecha" "izquierda contenido contenido derecha" "footer footer footer derecha";
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 80px 80px auto auto 80px;
-        grid-gap: 1rem;
+// .contenedor {
+//     display: grid;
+//     margin: 0 auto;
+//     max-width: 900px;
+//     background-color: $blanco;
+//     height: 100vh;
+//     grid-template-areas: "header" "nav" "izquierda" "contenido" "derecha" "footer";
+//     @include tablet {
+//         grid-template-areas: "header header header header" "izquierda nav nav nav" "izquierda contenido contenido derecha" "izquierda contenido contenido derecha" "footer footer footer derecha";
+//         grid-template-columns: repeat(4, 1fr);
+//         grid-template-rows: 80px 80px auto auto 80px;
+//         grid-gap: 1rem;
+//     }
+//     >* {
+//         padding: 2rem;
+//         font-size: 1.4rem;
+//     }
+//     header {
+//         background-color: cornflowerblue;
+//         grid-area: header;
+//     }
+//     nav {
+//         background-color: coral;
+//         grid-area: nav;
+//     }
+//     aside.izquierda {
+//         background-color: cadetblue;
+//         grid-area: izquierda;
+//     }
+//     .contenido-principal {
+//         background-color: crimson;
+//         grid-area: contenido;
+//     }
+//     aside.derecha {
+//         background-color: darkblue;
+//         grid-area: derecha;
+//     }
+//     footer {
+//         background-color: darkmagenta;
+//         grid-area: footer;
+//     }
+// }
+
+/* ***** => Grid Auto-fit y Auto-fill (11) <= ***** */
+
+// h2 {
+//     margin: 0;
+// }
+// .servicios {
+//     border: 3px solid black;
+//     height: 300px;
+//     display: grid;
+//     // grid-template-columns: 100%;
+//     // @include tablet {
+//     //     grid-template-columns: repeat(3, 1fr);
+//     // }
+//     grid-template-columns: repeat(auto-fill, 200px);
+//     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+//     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+//     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+//     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+//     .servicio {
+//         color: $blanco;
+//         text-align: center;
+//     }
+//     .servicio-1 {
+//         background-color: darkviolet;
+//     }
+//     .servicio-2 {
+//         background-color: rgb(8, 77, 8);
+//     }
+//     .servicio-3 {
+//         background-color: teal;
+//     }
+//     .servicio-4 {
+//         background-color: cornflowerblue;
+//     }
+//     .servicio-5 {
+//         background-color: crimson;
+//     }
+//     .servicio-6 {
+//         background-color: darkmagenta;
+//     }
+// }
+
+/* ***** => Receta Fácil (12) <= ***** */
+
+.header {
+    padding-top: 3rem;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+}
+
+img {
+    max-width: 100%;
+}
+
+.navegacion {
+    background-color: black;
+    margin: 3rem 0;
+    a {
+        padding: 1rem;
+        color: $blanco;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        &:hover {
+            background-color: #C9C84A;
+        }
     }
-    >* {
-        padding: 2rem;
-        font-size: 1.4rem;
-    }
-    header {
-        background-color: cornflowerblue;
-        grid-area: header;
-    }
-    nav {
-        background-color: coral;
-        grid-area: nav;
-    }
-    aside.izquierda {
-        background-color: cadetblue;
-        grid-area: izquierda;
-    }
-    .contenido-principal {
-        background-color: crimson;
-        grid-area: contenido;
-    }
-    aside.derecha {
-        background-color: darkblue;
-        grid-area: derecha;
-    }
-    footer {
-        background-color: darkmagenta;
-        grid-area: footer;
+    .slider {
+        img {
+            width: 100%;
+        }
     }
 }
+
+.titulo {
+    text-align: center;
+}
+
+.entrada {
+    p {
+        text-align: justify;
+    }
+    blockquote {
+        font-size: 1.4rem;
+        text-align: center;
+        font-style: italic;
+        color: #525252;
+    }
+}
+
+.informacion {
+    background-color: #C9C84A;
+    color: $blanco;
+    font-size: 1.4rem;
+    p {
+        margin: 0 0 .5rem 0;
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+.imagen1,
+.imagen2 {
+    text-align: center;
+}
+
+.footer {
+    background-color: #C9C84A;
+    padding-top: 3rem;
+    text-align: center;
+    a {
+        display: block;
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #525252;
+        margin-bottom: .5rem;
+    }
+    .copyright {
+        color: white;
+        background-color: #282828;
+        margin: 3rem 0 0 0;
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+// Grid

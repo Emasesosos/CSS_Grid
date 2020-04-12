@@ -730,10 +730,6 @@ div {
     cursor: pointer;
     z-index: 0;
     height: 100%;
-    &:hover {
-        background-color: #fa7800;
-        color: $blanco;
-    }
     .badgeAudioVisual,
     .badgeMarketing,
     .badgeDesarrollo,
@@ -763,5 +759,50 @@ div {
         left: 0;
         color: #fff;
         text-decoration: none;
+    }
+}
+
+.produccion-audiovisual {
+    &:hover {
+        background-color: #fa7800;
+        color: $blanco;
+    }
+}
+
+.marketing {
+    &:hover {
+        background-color: #29b8e8;
+        color: $blanco;
+    }
+}
+
+.desarrollo {
+    &:hover {
+        background-color: #33b13a;
+        color: $blanco;
+    }
+}
+
+.diseno {
+    &:hover {
+        background-color: #6b407e;
+        color: $blanco;
+    }
+}
+
+.negocios {
+    background-color: #f3f8fb;
+    transition: .3s;
+    &:hover {
+        background-color: #f5c443;
+        transition: background-color .3s ease;
+        color: $blanco;
+    }
+}
+
+.profesional {
+    &:hover {
+        background-color: #cb161d;
+        color: $blanco;
     }
 }

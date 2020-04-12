@@ -39,7 +39,7 @@ const Categorias = () => {
                             </div>
                             <div className="categoria">
                                 <h2>Marketing</h2>
-                                <span>22 cursos</span>
+                                <span>72 cursos</span>
                             </div>
                             <a href="/"></a>
                         </div>

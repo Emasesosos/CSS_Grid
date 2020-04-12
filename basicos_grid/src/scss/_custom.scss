@@ -2,6 +2,10 @@ html {
     @include box-sizing(border-box);
 }
 
+* {
+    margin: 0;
+}
+
 *,
 *:after,
 *:before {
@@ -448,90 +452,316 @@ body {
 
 /* ***** => Receta Fácil (12) <= ***** */
 
-.header {
-    padding-top: 3rem;
+// .header {
+//     padding-top: 3rem;
+// }
+// h1 {
+//     font-family: 'Raleway', sans-serif;
+//     font-weight: 900;
+// }
+// img {
+//     max-width: 100%;
+// }
+// .navegacion {
+//     background-color: black;
+//     margin: 3rem 0;
+//     a {
+//         padding: 1rem;
+//         color: $blanco;
+//         text-decoration: none;
+//         text-transform: uppercase;
+//         text-align: center;
+//         &:hover {
+//             background-color: #C9C84A;
+//         }
+//     }
+//     .slider {
+//         img {
+//             width: 100%;
+//         }
+//     }
+// }
+// .titulo {
+//     text-align: center;
+// }
+// .entrada {
+//     p {
+//         text-align: justify;
+//     }
+//     blockquote {
+//         font-size: 1.4rem;
+//         text-align: center;
+//         font-style: italic;
+//         color: #525252;
+//     }
+// }
+// .informacion {
+//     background-color: #C9C84A;
+//     color: $blanco;
+//     font-size: 1.4rem;
+//     p {
+//         margin: 0 0 .5rem 0;
+//         padding: 1rem;
+//         text-align: center;
+//     }
+// }
+// .imagen1,
+// .imagen2 {
+//     text-align: center;
+// }
+// .footer {
+//     background-color: #C9C84A;
+//     padding-top: 3rem;
+//     text-align: center;
+//     a {
+//         display: block;
+//         color: black;
+//         text-decoration: none;
+//         text-transform: uppercase;
+//         color: #525252;
+//         margin-bottom: .5rem;
+//     }
+//     .copyright {
+//         color: white;
+//         background-color: #282828;
+//         margin: 3rem 0 0 0;
+//         padding: 1rem;
+//         text-align: center;
+//     }
+// }
+// // Grid
+// .navegacion {
+//     nav {
+//         display: grid;
+//         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+//     }
+// }
+// .contenedor {
+//     max-width: 1200px;
+//     margin: 0 auto;
+// }
+// .contenido-principal {
+//     @include tablet {
+//         display: grid;
+//         grid-template-columns: minmax(100px, max-content) auto minmax(100px, max-content);
+//         grid-template-rows: repeat(4, auto);
+//         grid-gap: 1rem;
+//     }
+//     .titulo {
+//         @include tablet {
+//             grid-column: 1/4;
+//         }
+//     }
+//     .informacion {
+//         @include tablet {
+//             grid-row: 2/3;
+//         }
+//     }
+//     .imagen1 {
+//         @include tablet {
+//             grid-row: 3/4;
+//             grid-column: 3/4;
+//         }
+//     }
+//     .imagen2 {
+//         @include tablet {
+//             grid-row: 4/5;
+//         }
+//     }
+//     .entrada {
+//         @include tablet {
+//             grid-column: 2/3;
+//             grid-row: 2/5;
+//         }
+//     }
+// }
+// .footer {
+//     .contenedor {
+//         display: grid;
+//         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+//     }
+// }
+
+/* ***** => Categorias (13) <= ***** */
+
+// .contenedor {
+//     max-width: 1200px;
+//     margin: 0 auto;
+//     display: flex;
+//     flex-direction: column;
+//     .categorias {
+//         margin: 0 auto;
+//         input {
+//             width: 100%;
+//             padding: .5rem;
+//             border-radius: 5px;
+//             border: 1px solid gray;
+//             outline: none;
+//         }
+//     }
+// }
+.badgeAudioVisual {
+    background-color: #fa7800;
 }
 
-h1 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 900;
+.badgeMarketing {
+    background-color: #29b8e8;
 }
 
-img {
-    max-width: 100%;
+.badgeDesarrollo {
+    background-color: #33b13a;
 }
 
-.navegacion {
-    background-color: black;
-    margin: 3rem 0;
-    a {
-        padding: 1rem;
+.badgeDiseno {
+    background-color: #6b407e;
+}
+
+.badgeNegocio {
+    background-color: #f5c443;
+}
+
+.badgeProfesional {
+    background-color: #cb161d;
+}
+
+div {
+    display: block;
+}
+
+.buscador {
+    padding: 1em 1em 0;
+    position: relative;
+    color: #606164;
+    @include tablet {
+        display: grid;
+        grid-template-columns: minmax(auto, 1024px);
+        justify-content: center;
+    }
+    .buscador-contenedor {
+        display: grid;
+        grid-template-columns: minmax(auto, 1024px);
+        justify-content: center;
+        position: relative;
+        .titulo {
+            text-align: center;
+            margin-bottom: 16px;
+            h2 {
+                display: block;
+                font-size: 1.5em;
+                margin-block-start: .83em;
+                margin-block-end: 0.83em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                font-weight: bold;
+                color: #273b47;
+            }
+        }
+        .contenido {
+            position: relative;
+            span {
+                position: absolute;
+                top: 16px;
+                left: 10px;
+                font-size: 12px;
+                @include tablet {
+                    top: 17px;
+                    font-size: 14px;
+                }
+            }
+            input[type="search"] {
+                font-size: 12px;
+                padding: 1.2em 1.2em 1.2em 3em;
+                width: 100%;
+                border: 1px solid #d9dfe6;
+                height: 42px;
+                outline: 0;
+                border-radius: 5px;
+                margin-right: 16px;
+                @include tablet {
+                    font-size: 14px;
+                    padding: 1.3em 1.3em 1.3em 2.4em;
+                    height: 48px;
+                }
+            }
+        }
+    }
+}
+
+.categorias {
+    padding: 1em 1em 2em;
+    color: #4a4a4a;
+    @include tablet {
+        padding: 1.5em 1em;
+    }
+    .categorias-contenedor {
+        display: grid;
+        justify-content: center;
+        @include desktop {
+            grid-template-columns: minmax(auto, 936px);
+        }
+    }
+}
+
+.items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    grid-row-gap: .5em;
+    grid-auto-rows: 1fr;
+    align-items: center;
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+        grid-row-gap: .5em;
+    }
+    @include desktop {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.5rem;
+        grid-row-gap: .5em;
+    }
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 64px auto;
+    background-color: #f3f8fb;
+    border-radius: 6px;
+    position: relative;
+    cursor: pointer;
+    z-index: 0;
+    height: 100%;
+    &:hover {
+        background-color: #fa7800;
         color: $blanco;
-        text-decoration: none;
-        text-transform: uppercase;
-        text-align: center;
-        &:hover {
-            background-color: #C9C84A;
-        }
     }
-    .slider {
+    .badgeAudioVisual,
+    .badgeMarketing,
+    .badgeDesarrollo,
+    .badgeDiseno,
+    .badgeNegocio,
+    .badgeProfesional {
+        border-radius: 6px 0px 0 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img {
-            width: 100%;
+            width: 32px;
+            border-style: none;
         }
     }
-}
-
-.titulo {
-    text-align: center;
-}
-
-.entrada {
-    p {
-        text-align: justify;
+    .categoria {
+        padding: 12px;
+        cursor: pointer;
+        border-radius: 6px;
+        align-self: center;
     }
-    blockquote {
-        font-size: 1.4rem;
-        text-align: center;
-        font-style: italic;
-        color: #525252;
-    }
-}
-
-.informacion {
-    background-color: #C9C84A;
-    color: $blanco;
-    font-size: 1.4rem;
-    p {
-        margin: 0 0 .5rem 0;
-        padding: 1rem;
-        text-align: center;
-    }
-}
-
-.imagen1,
-.imagen2 {
-    text-align: center;
-}
-
-.footer {
-    background-color: #C9C84A;
-    padding-top: 3rem;
-    text-align: center;
     a {
-        display: block;
-        color: black;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        color: #fff;
         text-decoration: none;
-        text-transform: uppercase;
-        color: #525252;
-        margin-bottom: .5rem;
-    }
-    .copyright {
-        color: white;
-        background-color: #282828;
-        margin: 3rem 0 0 0;
-        padding: 1rem;
-        text-align: center;
     }
 }
-
-// Grid
